@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressBar_MVC_DesignPattern_Logical" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Abcd" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-Nl-aeC">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZV-wx-xYI">
+                                <rect key="frame" x="0.0" y="59" width="393" height="379.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="987-YJ-snE">
+                                <rect key="frame" x="15" y="448.66666666666669" width="363" height="91.000000000000057"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="True"/>
+                                <connections>
+                                    <action selector="answerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YdE-tX-e4o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POb-b2-E1e">
+                                <rect key="frame" x="15" y="549.66666666666663" width="363" height="91"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="false"/>
+                                <connections>
+                                    <action selector="answerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Pt-1e-dNq"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="jN7-5q-tGb">
+                                <rect key="frame" x="15" y="680.66666666666663" width="363" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Xhn-17-oou"/>
+                                </constraints>
+                                <color key="progressTintColor" systemColor="systemRedColor"/>
+                                <color key="trackTintColor" systemColor="systemBrownColor"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="POb-b2-E1e" firstAttribute="top" secondItem="987-YJ-snE" secondAttribute="bottom" constant="10" id="6Gp-Dk-6U3"/>
+                            <constraint firstItem="987-YJ-snE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="EEW-aA-4cP"/>
+                            <constraint firstItem="POb-b2-E1e" firstAttribute="trailing" secondItem="987-YJ-snE" secondAttribute="trailing" id="Glb-ru-arb"/>
+                            <constraint firstItem="9ZV-wx-xYI" firstAttribute="height" secondItem="OQr-Nl-aeC" secondAttribute="height" multiplier="0.5" id="IbZ-Zr-4wm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OQr-Nl-aeC" secondAttribute="bottom" id="MPA-La-AUG"/>
+                            <constraint firstItem="jN7-5q-tGb" firstAttribute="trailing" secondItem="POb-b2-E1e" secondAttribute="trailing" id="MRe-8l-ONG"/>
+                            <constraint firstItem="9ZV-wx-xYI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q8S-Zn-eQ4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="987-YJ-snE" secondAttribute="trailing" constant="15" id="T2G-5P-gHL"/>
+                            <constraint firstItem="POb-b2-E1e" firstAttribute="height" secondItem="987-YJ-snE" secondAttribute="height" id="ZUP-lv-zj8"/>
+                            <constraint firstItem="jN7-5q-tGb" firstAttribute="top" secondItem="POb-b2-E1e" secondAttribute="bottom" constant="40" id="aIv-dK-xz1"/>
+                            <constraint firstItem="9ZV-wx-xYI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ez3-KV-ECR"/>
+                            <constraint firstItem="OQr-Nl-aeC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gji-LQ-TWE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OQr-Nl-aeC" secondAttribute="trailing" id="gte-JJ-Omk"/>
+                            <constraint firstItem="9ZV-wx-xYI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iTg-j2-jtz"/>
+                            <constraint firstItem="POb-b2-E1e" firstAttribute="leading" secondItem="987-YJ-snE" secondAttribute="leading" id="ngb-B4-bgy"/>
+                            <constraint firstItem="OQr-Nl-aeC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t12-AE-eu8"/>
+                            <constraint firstItem="987-YJ-snE" firstAttribute="top" secondItem="9ZV-wx-xYI" secondAttribute="bottom" constant="10" id="tfO-A2-Ot7"/>
+                            <constraint firstItem="jN7-5q-tGb" firstAttribute="leading" secondItem="POb-b2-E1e" secondAttribute="leading" id="w4i-gj-RwS"/>
+                            <constraint firstItem="987-YJ-snE" firstAttribute="height" secondItem="OQr-Nl-aeC" secondAttribute="height" multiplier="0.12" id="zi5-ai-Mpn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="falseButton" destination="POb-b2-E1e" id="vQb-41-HT1"/>
+                        <outlet property="progressBar" destination="jN7-5q-tGb" id="cKC-dK-sDG"/>
+                        <outlet property="questionLabel" destination="9ZV-wx-xYI" id="Hz3-TC-5XU"/>
+                        <outlet property="trueButton" destination="987-YJ-snE" id="qLx-O3-x4o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Abcd" width="612" height="408"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
